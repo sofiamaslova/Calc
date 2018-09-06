@@ -7,7 +7,9 @@
     <meta name="keywords" content="Калькулятор">
     <title>Калькулятор</title>
     <script type="text/javascript">
-        // Обьявляем переменную только в Java скрипт
+
+
+    // Обьявляем переменную только в Java скрипт
         var j = 10;
         console.log(j);
 
@@ -24,40 +26,42 @@
  <tbody>
 
 <tr>
-<td colspan="4"><input type="text">
+<td colspan="4"><input id="editWide" name="ReadOut" type="Text"
+                       size=28 value="0">
 </td>
 </tr>
 <tr>
-    <td><button id="button-1" name = "button-1" class = "increment-button">1</button></td>
-    <td><button id="button-2" class = "increment-button">2</button></td>
-    <td><button id="button-3" class = "increment-button">3</button></td>
-    <td><button>+</button></td>
+    <td><input type= "Button" name = "button1"  value="1"  onclick="NumPressed(1)"></td>
+    <td><input type= "Button" name = "button2" value="2" onclick="NumPressed(2)"></td>
+    <td><input type= "Button" name = "button3" value="3" onclick="NumPressed(3)"></td>
+    <td><input type= "Button" name = "BtnPlus" value="+" onclick="Operation('+')"></td>
 </tr>
 <tr>
-    <td><button>4</button></td>
-    <td><button>5</button></td>
-    <td><button>6</button></td>
-    <td><button>-</button></td>
+    <td><button name = "button4" value="4" onclick="NumPressed(4)">4</button></td>
+    <td><button name = "button5" value="5" onclick="NumPressed(5)">5</button></td>
+    <td><button name = "button6" value="6" onclick="NumPressed(6)">6</button></td>
+    <td><button name = "BtnMinus" value="-" onclick="Operation('-')">-</button></td>
 </tr>
 <tr>
-    <td><button>7</button></td>
-    <td><button>8</button></td>
-    <td><button>9</button></td>
-    <td><button>*</button></td>
+    <td><button name = "button7" value="7" onclick="NumPressed(7)">7</button></td>
+    <td><button name = "button8" value="8" onclick="NumPressed(8)">8</button></td>
+    <td><button name = "button9" value="9" onclick="NumPressed(9)">9</button></td>
+    <td><button name = "BtnUmn" value="*" onclick="Operation('*')">*</button></td>
 </tr>
 <tr>
     <td></td>
-    <td><button>0</button></td>
-    <td><button>.</button></td>
-    <td><button>/</button></td>
+    <td><button name = "button0" value="0" onclick="NumPressed(0)">0</button></td>
+    <td><button name = "BtnDec" value="." onclick="Operation('.')" >.</button></td>
+    <td><button name = "BtnDev" value="/" onclick="Operation('/')">/</button></td>
 </tr>
 <tr>
-<td><button><-</button></td>
+<td><button name = "BtnDel" value="C" onclick="Clear()"><-</button></td>
 <td colspan="2"></td>
-<td><button>=</button></td>
+<td><button name = "BtnRovno" value="=" onclick="Operation('=')">=</button></td>
 </tr>
  </tbody>
 </table>
+
  <label for="button-1">Test</label>
  <script src="index.js" type="text/javascript"> </script>
 </body>
